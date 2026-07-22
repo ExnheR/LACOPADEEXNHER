@@ -1,0 +1,28 @@
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #D71920 !important;
+}
+
+/* =====================================
+   SCROLL SUAVE
+===================================== */
+
+html {
+    scroll-behavior: smooth;
+}
