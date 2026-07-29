@@ -1,0 +1,42 @@
+[
+    {
+        "group": "Group A",
+        "team1": "Mexico",
+        "team2": "Canada",
+        "date": "June 15, 2026",
+        "time": "18:00",
+        "stadium": "Estadio Azteca (Mexico City, Mexico)"
+    },
+    {
+        "group": "Group B",
+        "team1": "USA",
+        "team2": "Germany",
+        "date": "June 16, 2026",
+        "time": "20:00",
+        "stadium": "Estadio BBVA (Monterrey, Mexico)"
+    },
+    {
+        "group": "Group C",
+        "team1": "Argentina",
+        "team2": "Brazil",
+        "date": "June 17, 2026",
+        "time": "19:00",
+        "stadium": "Estadio Akron (Guadalajara, Mexico)"
+    },
+    {
+        "group": "Group D",
+        "team1": "Spain",
+        "team2": "France",
+        "date": "June 18, 2026",
+        "time": "21:00",
+        "stadium": "BMO Field (Toronto, Canada)"
+    },
+    {
+        "group": "Group E",
+        "team1": "England",
+        "team2": "Portugal",
+        "date": "June 19, 2026",
+        "time": "18:00",
+        "stadium": "BC Place (Vancouver, Canada)"
+    }
+]

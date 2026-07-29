@@ -1,281 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FIFA World Cup 2026</title>
-
-    <link rel="stylesheet" href="static/css/Zzz.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal informativo e histórico sobre la Copa Mundial de la FIFA 2026.">
+  <title>La Copa 2026 - Portal Informativo e Histórico</title>
+  <link rel="icon" type="image/png" href="static/img/FIFA-world-cup-2026-752x440.png">
+  <link rel="stylesheet" href="static/css/Zzz.css">
+  <style>
+    /* Asegura un desplazamiento suave al hacer clic en los enlaces de anclaje */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- ====================================================== -->
-<!-- NAVBAR -->
-<!-- ====================================================== -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-
-    <div class="container">
-
-        <!-- Logo + Nombre -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-
-            <img src="static/img/FIFA-world-cup-2026-752x440.png"
-                 alt="World Cup 2026 Logo"
-                 width="50"
-                 class="me-2">
-
-            <span class="fw-bold">
-                FIFA World Cup 2026
-            </span>
-
-        </a>
-
-        <!-- Botón Mobile -->
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <!-- Menú -->
-        <div class="collapse navbar-collapse" id="menu">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#matches">Matches</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#results">Results</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#groups">Groups</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#positions">Positions</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#teams">Teams</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#stadiums">Stadiums</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#cities">Cities</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#news">News</a>
-                </li>
-
-            </ul>
-
-        </div>
-
+  <!-- BARRA DE NAVEGACIÓN LATERAL (SIDEBAR) -->
+  <nav class="nav-main">
+    <a href="index.html" class="nav-brand" aria-label="Ir al inicio">
+      <img src="static/img/FIFA-world-cup-2026-752x440.png" alt="Logo de la Copa Mundial 2026" class="nav-logo">
+    </a>
+    
+    <div class="nav-links">
+      <a href="#inicio" id="nav-inicio" class="nav-link active">Inicio</a>
+      <a href="#grupos" id="nav-grupos" class="nav-link">Grupos</a>
+      <a href="#partidos-grupos" id="nav-partidos" class="nav-link">Partidos</a>
+      <a href="#ciudades" id="nav-ciudades" class="nav-link">Ciudades</a>
+      <a href="#estadios" id="nav-estadios" class="nav-link">Estadios</a>
+      <a href="Teams.html" id="nav-selecciones" class="nav-link">Selecciones</a>
+      <a href="Results.html" id="nav-resultados" class="nav-link">Resultados</a>
+      <a href="Positions.html" id="nav-posiciones" class="nav-link">Posiciones</a>
+      <a href="News.html" id="nav-noticias" class="nav-link">Noticias</a>
     </div>
 
-</nav>
-
-<!-- ====================================================== -->
-<!-- HERO SECTION -->
-<!-- ====================================================== -->
-
-<section class="hero">
-
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <!-- Texto -->
-            <div class="col-lg-6">
-
-                <span class="badge bg-danger mb-3">
-                    FIFA WORLD CUP 2026
-                </span>
-
-                <h1 class="display-3 fw-bold">
-                    The Greatest Football Show on Earth
-                </h1>
-
-                <p class="fs-3 text-danger fw-semibold">
-                     United by Passion, Driven by Dreams
-                </p>
-
-                <p class="lead mt-3">
-                    Follow every match, result, team, stadium and statistic from the biggest football tournament in the world.
-                </p>
-
-                <!-- Botones -->
-                <div class="mt-4">
-
-                </div>
-
-            </div>
-
-            <!-- Imagen -->
-            <div class="col-lg-6 text-center">
-            <img
-        src="static/img/FIFA-world-cup-2026-752x440.png"
-        class="img-fluid rounded shadow"
-        style="max-height: 400px;"
-        alt="World Cup Logo">
-</div>
-
-        </div>
-
+    <div class="lang-selector">
+      <label for="languageSelect" class="visually-hidden">Seleccionar idioma</label>
+      <select id="languageSelect">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
     </div>
+  </nav>
 
-</section>
+  <!-- CONTENEDOR PRINCIPAL A LA DERECHA -->
+  <div class="main-content">
 
-<!-- MATCHES -->
-<section id="matches" class="container py-5">
+    <!-- ENCABEZADO SUPERIOR -->
+    <header class="header-top">
+      <h1 id="site-title">La Copa 2026</h1>
+      <p id="site-sub">Portal informativo e histórico de la Copa Mundial de la FIFA 2026</p>
+    </header>
 
-    <h2 class="mb-4 fw-bold">Upcoming Matches</h2>
+    <!-- HERO / BANNER PRINCIPAL -->
+    <section class="hero-section" id="inicio">
+      <img src="static/img/FIFA-world-cup-2026-752x440.png" alt="Logo de la Copa Mundial de la FIFA 2026" class="hero-banner-img">
+      
+      <h2 id="hero-title">¡España, campeona de la Copa Mundial de la FIFA 2026!</h2>
+      <p id="hero-desc" class="hero-desc-highlight">
+        España se consagró como el equipo ganador del Mundial 2026 tras un partido cerrado con resultado 1-0 frente a Argentina, destacando su defensa y efectividad ofensiva. El torneo histórico, organizado por Canadá, Estados Unidos y México, fue el primero en contar con 48 selecciones.
+      </p>
 
-    <!-- AQUÍ SE PINTAN LAS CARDS -->
-    <div class="row" id="matches-container"></div>
+      <!-- CONTADOR PARA EL MUNDIAL 2030 -->
+      <div class="countdown-container">
+        <p id="countdown-title" class="countdown-title-text">
+          Cuenta regresiva para la Copa Mundial de la FIFA 2030:
+        </p>
+        <div class="countdown-timer">
+          <div class="time-box">
+            <span id="days">--</span>
+            <p id="lbl-days">Días</p>
+          </div>
+          <div class="time-box">
+            <span id="hours">--</span>
+            <p id="lbl-hours">Horas</p>
+          </div>
+          <div class="time-box">
+            <span id="minutes">--</span>
+            <p id="lbl-minutes">Minutos</p>
+          </div>
+          <div class="time-box">
+            <span id="seconds">--</span>
+            <p id="lbl-seconds">Segundos</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="text-center mt-4">
-        <a href="matches.html" class="btn btn-outline-primary">
-            View More Matches
-        </a>
-    </div>
+    <!-- SECCIÓN DE GRUPOS -->
+    <section id="grupos" class="section-block">
+      <div class="section-header">
+        <h2 id="sec-groups-title">Estructura de Grupos del Torneo</h2>
+        <p id="sec-groups-desc">El Mundial 2026 contó con 48 selecciones distribuidas en 12 grupos de cuatro equipos.</p>
+      </div>
 
-</section>
-<!-- ====================================================== -->
-<!-- RESULTS -->
-<!-- ====================================================== -->
-
-<section id="results" class="container py-5">
-
-    <h2>Latest Results</h2>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- GROUPS -->
-<!-- ====================================================== -->
-
-<section id="groups" class="container py-5">
-
-    <h2>Groups</h2>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- POSITIONS -->
-<!-- ====================================================== -->
-
-<section id="positions" class="container py-5">
-
-    <h2>Standings</h2>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- TEAMS -->
-<!-- ====================================================== -->
-
-<section id="teams" class="container py-5">
-
-    <h2>Teams</h2>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- STADIUMS -->
-<!-- ====================================================== -->
-
-<section id="stadiums" class="container py-5">
-
-    <h2>Stadiums</h2>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- CITIES -->
-<!-- ====================================================== -->
-
-<section id="cities" class="container py-5">
-
-    <h2 class="fw-bold mb-4">
-        Host Cities
-    </h2>
-
-    <div class="row g-4">
-
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <img src="static/img/Cities/Canada/Toronto.png"
-                     class="card-img-top"
-                     alt="Toronto">
-                <div class="card-body">
-                    <h5 class="card-title">Toronto</h5>
-                    <p class="card-text">Canada</p>
-                </div>
-            </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Grupo A</h3>
+          <ul class="group-team-list">
+            <li><strong>México</strong></li>
+            <li>Sudáfrica</li>
+            <li>Corea del Sur</li>
+            <li>Grecia</li>
+          </ul>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <img src="static/img/Cities/Canada/Vancouver.png"
-                     class="card-img-top"
-                     alt="Vancouver">
-                <div class="card-body">
-                    <h5 class="card-title">Vancouver</h5>
-                    <p class="card-text">Canada</p>
-                </div>
-            </div>
+        <div class="card">
+          <h3>Grupo B</h3>
+          <ul class="group-team-list">
+            <li><strong>Canadá</strong></li>
+            <li>Suiza</li>
+            <li>Catar</li>
+            <li>Nigeria</li>
+          </ul>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <img src="static/img/Cities/Mx/CDMX.png"
-                     class="card-img-top"
-                     alt="Mexico City">
-                <div class="card-body">
-                    <h5 class="card-title">Mexico City</h5>
-                    <p class="card-text">Mexico</p>
-                </div>
-            </div>
+        <div class="card">
+          <h3>Grupo C</h3>
+          <ul class="group-team-list">
+            <li>Brasil</li>
+            <li>Marruecos</li>
+            <li>Escocia</li>
+            <li>Haití</li>
+          </ul>
         </div>
 
-    </div>
+        <div class="card">
+          <h3>Grupo D</h3>
+          <ul class="group-team-list">
+            <li><strong>Estados Unidos</strong></li>
+            <li>Paraguay</li>
+            <li>Australia</li>
+            <li>Polonia</li>
+          </ul>
+        </div>
+      </div>
 
-</section>
+      <div class="more-container">
+        <a href="Groups.html" id="btn-see-groups" class="btn-see-more">Ver los 12 grupos del Mundial</a>
+      </div>
+    </section>
 
-<!-- ====================================================== -->
-<!-- NEWS -->
-<!-- ====================================================== -->
+    <!-- SECCIÓN DE RESULTADOS DE PARTIDOS -->
+    <section id="partidos-grupos" class="section-block">
+      <div class="section-header">
+        <h2 id="sec-res-title">Resultados de Partidos - Fases Previas</h2>
+        <p id="sec-res-desc">Marcadores oficiales de los encuentros disputados en la fase de grupos y rondas eliminatorias.</p>
+      </div>
 
-<section id="news" class="container py-5">
+      <div class="cards-grid">
+        <div class="card match-card">
+          <span class="badge">Cuartos de Final</span>
+          <h3>Argentina 3 - 1 Suiza (Prórroga)</h3>
+          <p><strong>Fecha:</strong> 11 de julio, 2026</p>
+          <p><strong>Estadio:</strong> Estadio Arrowhead (Kansas City, EE. UU.)</p>
+        </div>
 
-    <h2>News</h2>
+        <div class="card match-card">
+          <span class="badge">Grupo A - Jornada 1</span>
+          <h3>México 2 - 1 Sudáfrica</h3>
+          <p><strong>Fecha:</strong> 11 de junio, 2026</p>
+          <p><strong>Estadio:</strong> Estadio Azteca (Ciudad de México)</p>
+        </div>
 
-</section>
+        <div class="card match-card">
+          <span class="badge">Grupo A - Jornada 1</span>
+          <h3>Corea del Sur 1 - 1 Grecia</h3>
+          <p><strong>Fecha:</strong> 12 de junio, 2026</p>
+          <p><strong>Estadio:</strong> Akron (Guadalajara)</p>
+        </div>
 
+        <div class="card match-card">
+          <span class="badge">Grupo B - Jornada 1</span>
+          <h3>Canadá 2 - 1 Suiza</h3>
+          <p><strong>Fecha:</strong> 12 de junio, 2026</p>
+          <p><strong>Estadio:</strong> BMO Field (Toronto)</p>
+        </div>
+      </div>
 
+      <div class="more-container">
+        <a href="Results.html" id="btn-see-results" class="btn-see-more">Ver todos los resultados</a>
+      </div>
+    </section>
 
+    <!-- SECCIÓN CIUDADES -->
+    <section id="ciudades" class="section-block">
+      <div class="section-header">
+        <h2 id="sec-cities-title">Sedes Oficiales Destacadas</h2>
+        <p id="sec-cities-desc">El torneo se disputó en 16 ciudades de Canadá, Estados Unidos y México.</p>
+      </div>
 
+      <div class="cards-grid">
+        <div class="card">
+          <img src="static/img/Cities/Mx/CDMX.png" alt="Ciudad de México" class="card-img">
+          <h3>Ciudad de México</h3>
+          <p><strong>País:</strong> México</p>
+          <p>Principal sede del torneo y receptor de encuentros históricos.</p>
+        </div>
 
-<script src="static/js/scripts.js"></script>
+        <div class="card">
+          <img src="static/img/Cities/Usa/newyork.png" alt="Nueva York y Nueva Jersey" class="card-img">
+          <h3>Nueva York / Nueva Jersey</h3>
+          <p><strong>País:</strong> Estados Unidos</p>
+          <p>Sede de la gran final entre España y Argentina (Estadio MetLife).</p>
+        </div>
+
+        <div class="card">
+          <img src="static/img/Cities/Canada/Toronto.png" alt="Toronto" class="card-img">
+          <h3>Toronto</h3>
+          <p><strong>País:</strong> Canadá</p>
+          <p>Una de las ciudades canadienses seleccionadas como sede oficial.</p>
+        </div>
+      </div>
+
+      <div class="more-container">
+        <a href="Cities.html" id="btn-see-cities" class="btn-see-more">Explorar las 16 sedes oficiales</a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN ESTADIOS -->
+    <section id="estadios" class="section-block">
+      <div class="section-header">
+        <h2 id="sec-stadiums-title">Estadios Principales</h2>
+        <p id="sec-stadiums-desc">Los recintos deportivos más emblemáticos de la competición.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Estadio MetLife</h3>
+          <p><strong>Ubicación:</strong> Nueva York / Nueva Jersey, EE. UU.</p>
+          <p>Escenario encargado de albergar la gran final.</p>
+        </div>
+
+        <div class="card">
+          <h3>Estadio Azteca</h3>
+          <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+          <p>Histórico templo del balompié mundial.</p>
+        </div>
+
+        <div class="card">
+          <h3>SoFi Stadium</h3>
+          <p><strong>Ubicación:</strong> Los Ángeles, EE. UU.</p>
+          <p>Maravilla arquitectónica moderna con tecnología de vanguardia.</p>
+        </div>
+      </div>
+
+      <div class="more-container">
+        <a href="Stadiums.html" id="btn-see-stadiums" class="btn-see-more">Ver los 16 estadios oficiales</a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FASE FINAL -->
+    <section id="fase-final" class="section-block">
+      <div class="section-header">
+        <h2 id="sec-final-title">Fase Final y Cuadro de Honor</h2>
+        <p id="sec-final-desc">Resultados de los encuentros decisivos que definieron al campeón del mundo.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card match-card">
+          <span class="badge">Semifinal 1</span>
+          <h3>España 2 - 0 Francia</h3>
+          <p><strong>Fecha:</strong> 14 de julio de 2026</p>
+        </div>
+
+        <div class="card match-card">
+          <span class="badge">Semifinal 2</span>
+          <h3>Inglaterra 1 - 2 Argentina</h3>
+          <p><strong>Fecha:</strong> 15 de julio de 2026</p>
+        </div>
+
+        <div class="card match-card">
+          <span class="badge">Tercer Puesto</span>
+          <h3>Inglaterra 6 - 4 Francia (p. penales)</h3>
+          <p><strong>Fecha:</strong> 18 de julio de 2026</p>
+        </div>
+
+        <div class="card match-card final-match">
+          <span class="badge badge-gold">🏆 Gran Final</span>
+          <h3>España 1 - 0 Argentina</h3>
+          <p><strong>Fecha:</strong> 19 de julio de 2026</p>
+        </div>
+      </div>
+
+      <div class="more-container">
+        <a href="Matches.html" id="btn-see-matches" class="btn-see-more">Ver calendario completo de partidos</a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN PRÓXIMO MUNDIAL 2030 -->
+    <section id="proximo-mundial" class="section-block">
+      <div class="section-header">
+        <h2 id="sec-2030-title">Camino al Centenario: Mundial 2030</h2>
+        <p id="sec-2030-desc">La próxima Copa Mundial celebrará los 100 años de la primera edición disputada en Uruguay.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3 id="card-2030-1-title">Países Anfitriones Principales</h3>
+          <p><strong>España, Portugal y Marruecos</strong></p>
+          <p id="card-2030-1-desc">Estos países albergarán la mayor parte de los encuentros del Mundial 2030.</p>
+        </div>
+
+        <div class="card">
+          <h3 id="card-2030-2-title">Partidos Conmemorativos</h3>
+          <p><strong>Uruguay, Argentina y Paraguay</strong></p>
+          <p id="card-2030-2-desc">Estos países recibirán partidos especiales relacionados con la celebración del centenario.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-block">
+      <div class="section-header text-center">
+        <h2 id="sec-faq-title">Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary id="faq-q1">¿Quién ganó la Copa Mundial de la FIFA 2026?</summary>
+          <p id="faq-a1">España se coronó campeona tras vencer 1-0 a Argentina en la gran final disputada el 19 de julio de 2026.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary id="faq-q2">¿Quién quedó en tercer lugar?</summary>
+          <p id="faq-a2">Inglaterra obtuvo el tercer puesto tras imponerse 6-4 en la tanda de penales ante Francia el 18 de julio de 2026.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary id="faq-q3">¿Cómo avanzaron los finalistas a la definición?</summary>
+          <p id="faq-a3">España venció 2-0 a Francia en semifinales, mientras que Argentina superó 2-1 a Inglaterra.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary id="faq-q4">¿Cuántas selecciones participaron?</summary>
+          <p id="faq-a4">La Copa Mundial de la FIFA 2026 fue la primera edición con 48 selecciones participantes.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary id="faq-q5">¿Dónde se jugará el Mundial 2030?</summary>
+          <p id="faq-a5">España, Portugal y Marruecos serán los anfitriones principales. Además, Uruguay, Argentina y Paraguay recibirán encuentros conmemorativos.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsors" class="section-block sponsors-section">
+      <div class="section-header text-center">
+        <h2 id="sec-sponsors-title">Socios y Patrocinadores</h2>
+        <p id="sec-sponsors-desc" class="section-desc">
+          Marcas globales oficiales que impulsan la Copa Mundial de la FIFA 2026.
+        </p>
+      </div>
+
+      <div class="sponsor-category-wrapper">
+        <h3 id="cat-fifa-partners" class="category-title">Socios de la FIFA</h3>
+      </div>
+      
+      <div class="sponsors-grid">
+        <div class="sponsor-card">
+          <img src="static/img/Sponsors/adidas.png" alt="Adidas" class="sponsor-img">
+        </div>
+        <div class="sponsor-card">
+          <img src="static/img/Sponsors/coca-cola.png" alt="Coca-Cola" class="sponsor-img">
+        </div>
+        <div class="sponsor-card">
+          <img src="static/img/Sponsors/visa.png" alt="Visa" class="sponsor-img">
+        </div>
+        <div class="sponsor-card">
+          <img src="static/img/Sponsors/hyundai.png" alt="Hyundai" class="sponsor-img">
+        </div>
+        <div class="sponsor-card">
+          <img src="static/img/Sponsors/qatar-airways.png" alt="Qatar Airways" class="sponsor-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p id="footer-copy">&copy; 2026 La Copa - Portal informativo no oficial.</p>
+        <p id="footer-credits" class="credits"> Desarrollado por Exnher Jose Sánchez Fragozo.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="static/js/scripts.js"></script>
 </body>
 </html>
